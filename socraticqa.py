@@ -1,8 +1,10 @@
 import streamlit as st
 from openai import OpenAI
 
-# OpenAI 클라이언트 생성 (환경변수 OPENAI_API_KEY 필요)
-client = OpenAI()
+api_key = st.secrets["openai_api_key"]
+
+# OpenAI 클라이언트 생성
+client = OpenAI(api_key=api_key)
 
 st.set_page_config(page_title="CBT 챗봇", layout="centered")
 st.title("Today's Record")
