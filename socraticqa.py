@@ -48,7 +48,7 @@ elif 0 <= st.session_state.step < 5:
         if user_input.strip():
             st.session_state.responses.append(user_input.strip())
             st.session_state.step += 1
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.warning("답변을 입력해주세요.")
 
