@@ -36,7 +36,7 @@ if st.session_state.step == -1:
     st.session_state.used_drug = st.selectbox("오늘 약물 복용을 했나요?", ("", "예", "아니오"))
     if st.session_state.used_drug in ["예", "아니오"]:
         st.session_state.step = 0
-        st.experimental_rerun()
+        st.rerun()
 
 # 2단계 이후: 질문 진행
 elif 0 <= st.session_state.step < 5:
