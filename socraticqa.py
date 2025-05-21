@@ -94,4 +94,4 @@ if st.session_state.finished:
     if st.button("처음부터 다시 작성하기"):
         for key in st.session_state.keys():
             del st.session_state[key]
-        st.experimental_rerun()
+        st.rerun()
