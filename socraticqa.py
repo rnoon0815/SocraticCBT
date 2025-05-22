@@ -193,7 +193,7 @@ elif st.session_state.step == 5 and not st.session_state.finished:
             try:
                 response = client.chat.completions.create(
                     model="ft:gpt-3.5-turbo-1106:personal:distortion:BZis7uu0",
-                    messages=[{"role": "system", "content": "You are a helpful assistant that always responds only in English."},{"role": "user", "content": f"Below is the user's CBT self-record. Please analyze each response and identify the cognitive distortions or belief types present. Respond only in English, listing only the distortions found from the following possible types: mind reading, fortune-telling, all-or-nothing thinking, should statements, labeling, emotional reasoning, personalization, magnification, overgeneralization, and mental filter.:\n\n{all_answers}"}],
+                    messages=[{"role": "system", "content": messages = [{"role": "system", "content": "You are a CBT chatbot. You understand and analyze user input in Korean. Please always respond in English."},{"role": "user", "content": f"Below is the user's CBT self-record. Please analyze each response and identify the cognitive distortions or belief types present. Respond only in English, listing only the distortions found from the following possible types: mind reading, fortune-telling, all-or-nothing thinking, should statements, labeling, emotional reasoning, personalization, magnification, overgeneralization, and mental filter.:\n\n{all_answers}"}],
                     temperature=0.0,
                 )
                 st.session_state.classification_summary = response.choices[0].message.content.strip()
