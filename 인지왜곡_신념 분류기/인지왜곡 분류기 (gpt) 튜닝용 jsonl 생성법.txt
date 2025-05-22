@@ -1,0 +1,7 @@
+1. CBT benchmark dataset의 distortions_seed, distortions_test 데이터셋 각각의 ori_text, situation, thought를 분리하여 새로운 jsonl 라인으로 만들고 (x), distortion을 y로 다시 매치
+-> ori_text : distortion, situation : distortion, thought : distortion 연결되도록.
+
+2. 이를 distortions_seed와 distortions_test 모두에 진행하고 merge. 
+-> merged_distortions_output.jsonl 생성.
+
+3. tran/valid 9:1 비율로 train/valid 학습셋 생성 후 gpt 3.5 turbo 훈련.
