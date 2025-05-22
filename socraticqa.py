@@ -2,6 +2,7 @@ import streamlit as st
 from openai import OpenAI
 import datetime
 
+st.set_page_config(page_title="CBT 챗봇", layout="centered")
 
 def coping_with_craving(): # topic 1 - 약물을 사용한 경우 무조건 실행
     st.markdown("## 🚨 갈망 대처 실습")  
@@ -126,9 +127,7 @@ skill_name_to_func = {v: k for k, v in skill_name_map.items()}
 # OpenAI 클라이언트 생성
 api_key = st.secrets["openai_api_key"]
 client = OpenAI(api_key=api_key)
-st.set_page_config(page_title="CBT 챗봇", layout="centered")
 
-st.set_page_config(page_title="CBT 챗봇", layout="centered")
 st.title("🧠 CBT 자기기록 - Today's Record")
 
 # 세션 상태 초기화
