@@ -123,9 +123,10 @@ skill_name_map = {
 }
 skill_name_to_func = {v: k for k, v in skill_name_map.items()}
 
-# open ai key
+# OpenAI 클라이언트 생성
 api_key = st.secrets["openai_api_key"]
-client = OpenAI(api_key=api_key)  # 변수 api_key를 전달
+client = OpenAI(api_key=api_key)
+st.set_page_config(page_title="CBT 챗봇", layout="centered")
 
 st.set_page_config(page_title="CBT 챗봇", layout="centered")
 st.title("🧠 CBT 자기기록 - Today's Record")
