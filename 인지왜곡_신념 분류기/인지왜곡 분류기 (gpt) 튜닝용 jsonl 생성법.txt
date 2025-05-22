@@ -2,6 +2,6 @@
 -> ori_text : distortion, situation : distortion, thought : distortion 연결되도록.
 
 2. 이를 distortions_seed와 distortions_test 모두에 진행하고 merge. 
--> merged_distortions_output.jsonl 생성.
+-> merged_distortions_output.jsonl 생성. (코드는 ipynb 파일에 있음)
 
 3. tran/valid 9:1 비율로 train/valid 학습셋 생성 후 gpt 3.5 turbo 훈련.
